@@ -1,0 +1,145 @@
+  
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Trippin</title>
+  <link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid nav-div">
+      <span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span>
+      <li class="nav-li"><a href="#">Home</a></li>
+      <li class="nav-li"><a href="songs.html">Add Music</a></li>
+      <li class="nav-li"><a href="#">View Music</a></li>
+      <li class="nav-li"><a href="#">Profile</a></li>
+    </div>
+  </nav>
+
+  <div class="container-fluid">   <!-- This div holds the whole grid -->
+    <div class="row">
+      <div id="options-box" class="col-md-4 choices">  <!-- This div holds content in the left hand options box -->
+        <div class="row slider">  <!-- Slider row -->
+          <div class="col-md-1"></div>  <!-- Empty spacer -->
+          <div class="col-md-10">
+            <legend>Song length:</legend>
+            <input type="range">
+          </div>
+          <div class="col-md-1"></div>  <!-- Empty spacer -->
+        </div>  <!-- End slider -->
+      
+        <div class="row select-buttons">  <!-- Start Album/Artist select box row -->
+          <div class="col-md-1"></div>  <!-- Empty spacer  -->
+          <div class="col-md-5">  <!-- Artist Button --> 
+            <div class="artist">
+              <legend>Artist:</legend>
+                <select class="form-control" id="artists">
+                  <option value="" disabled selected>Select</option>
+                </select>         
+            </div>
+          </div>  <!-- End Artist Button -->
+
+          <div class="col-md-5">  <!-- Album Button -->
+            <div class="album">
+              <legend >Album:</legend>
+                <select class="form-control" id="album">
+                  <option value="" disabled selected>Select</option>
+                </select>
+            </div>         
+          </div>  <!-- End Album Button -->
+
+          <div class="col-md-1"></div>  <!-- Empty spacer -->
+        </div>  <!-- End Album/Artist select box row -->
+
+        <div class="row genre">  <!-- Start genre heading row -->
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+            <legend class="genre">Genre:</legend>
+          </div>
+          <div class="col-md-1"></div>
+        </div>  <!-- End genre row -->
+       
+      <form id="checkboxes" name="checkboxes">   
+        <div class="row genre-table">  <!-- First row of checkboxes -->
+          <div class="col-md-1"></div>  <!-- Empty space -->
+          <div class="col-md-4">
+            <div>
+              <label><input id="rock" type="checkbox" value="Rock"> Rock</label>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div>
+              <label><input id="country"type="checkbox" value="Country"> Country</label>
+            </div>
+          </div>
+          <div class="col-md-2"></div>  <!-- Empty space -->
+        </div>
+        <div class="row genre-table">
+          <div class="col-md-1"></div>  <!-- Empty space -->
+          <div class="col-md-4">
+            <label><input id="pop" type="checkbox" value="Pop"> Pop</label>
+          </div>
+          <div class="col-md-5">
+            <label><input id="jazz" type="checkbox" value="Jazz"> Jazz</label>
+          </div>
+          <div class="col-md-2"></div>  <!-- Empty space -->
+        </div>
+        <div class="row genre-table">
+          <div class="col-md-1"></div>  <!-- Empty space -->
+          <div class="col-md-4">
+            <label><input id="blues" type="checkbox" value="Blues"> Blues</label>
+          </div>
+          <div class="col-md-5">
+            <label><input id="rap" type="checkbox" value="Rap"> Rap</label>
+          </div>
+          <div class="col-md-2"></div>  <!-- Empty space -->
+        </div>
+        <div class="row genre-table">
+          <div class="col-md-1"></div>  <!-- Empty space -->
+          <div class="col-md-4">
+            <label><input id="alternative" type="checkbox" value="Alternative"> Alternative</label>
+          </div>
+          <div class="col-md-5">
+            <label><input id="all" type="checkbox" value="All"> All</label>
+          </div>
+          <div class="col-md-2"></div>  <!-- Empty space -->
+        </div>  <!-- End of all checkboxes -->
+
+        <div id="filter-btn" class="row">  <!-- Filter button row -->
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+            <div class="button filter">
+              <button id="filter" class="btn btn-primary btn-sm filter-button">Filter By Genre</button>
+            </div>
+          </div>
+          <div class="col-md-1"></div>
+        </div>  <!-- End filter button row -->
+      </form>
+
+      </div>  <!-- End options box -->
+    
+      <div id="main-spacer" class="col-md-1"></div> <!--Spacer between content boxes -->      
+      
+      <div class="col-md-7 songInfo">  <!-- This div holds song info in right hand box -->
+        <section id="content" class="songs">
+        </section> 
+      </div>
+      <!-- <div class="col-md-1"></div> -->
+   </div>  <!-- End of row that holds both boxes -->  
+  </div>  <!-- End of grid -->
+
+
+<!-- <script src="bower_components/jquery/dist/jquery.min.js"></script> -->
+<script data-main="javascripts/main" src="lib/bower_components/requirejs/require.js"></script>
+<!-- <script type="text/javascript"  src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>  -->
+</body>
+</html>
+
+
+
+
+ 

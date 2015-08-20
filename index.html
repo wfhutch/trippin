@@ -10,127 +10,160 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid nav-div">
-      <span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span>
-      <li class="nav-li"><a href="#">Home</a></li>
-      <li class="nav-li"><a href="songs.html">Add Music</a></li>
-      <li class="nav-li"><a href="#">View Music</a></li>
-      <li class="nav-li"><a href="#">Profile</a></li>
-    </div>
-  </nav>
 
-  <div class="container-fluid">   <!-- This div holds the whole grid -->
-    <div class="row">
-      <div id="options-box" class="col-md-4 choices">  <!-- This div holds content in the left hand options box -->
-        <div class="row slider">  <!-- Slider row -->
-          <div class="col-md-1"></div>  <!-- Empty spacer -->
-          <div class="col-md-10">
-            <legend>Song length:</legend>
-            <input type="range">
-          </div>
-          <div class="col-md-1"></div>  <!-- Empty spacer -->
-        </div>  <!-- End slider -->
-      
-        <div class="row select-buttons">  <!-- Start Album/Artist select box row -->
-          <div class="col-md-1"></div>  <!-- Empty spacer  -->
-          <div class="col-md-5">  <!-- Artist Button --> 
-            <div class="artist">
-              <legend>Artist:</legend>
-                <select class="form-control" id="artists">
-                  <option value="" disabled selected>Select</option>
-                </select>         
-            </div>
-          </div>  <!-- End Artist Button -->
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
 
-          <div class="col-md-5">  <!-- Album Button -->
-            <div class="album">
-              <legend >Album:</legend>
-                <select class="form-control" id="album">
-                  <option value="" disabled selected>Select</option>
-                </select>
-            </div>         
-          </div>  <!-- End Album Button -->
-
-          <div class="col-md-1"></div>  <!-- Empty spacer -->
-        </div>  <!-- End Album/Artist select box row -->
-
-        <div class="row genre">  <!-- Start genre heading row -->
-          <div class="col-md-1"></div>
-          <div class="col-md-10">
-            <legend class="genre">Genre:</legend>
-          </div>
-          <div class="col-md-1"></div>
-        </div>  <!-- End genre row -->
-       
-      <form id="checkboxes" name="checkboxes">   
-        <div class="row genre-table">  <!-- First row of checkboxes -->
-          <div class="col-md-1"></div>  <!-- Empty space -->
-          <div class="col-md-4">
-            <div>
-              <label><input id="rock" type="checkbox" value="Rock"> Rock</label>
-            </div>
-          </div>
-          <div class="col-md-5">
-            <div>
-              <label><input id="country"type="checkbox" value="Country"> Country</label>
-            </div>
-          </div>
-          <div class="col-md-2"></div>  <!-- Empty space -->
-        </div>
-        <div class="row genre-table">
-          <div class="col-md-1"></div>  <!-- Empty space -->
-          <div class="col-md-4">
-            <label><input id="pop" type="checkbox" value="Pop"> Pop</label>
-          </div>
-          <div class="col-md-5">
-            <label><input id="jazz" type="checkbox" value="Jazz"> Jazz</label>
-          </div>
-          <div class="col-md-2"></div>  <!-- Empty space -->
-        </div>
-        <div class="row genre-table">
-          <div class="col-md-1"></div>  <!-- Empty space -->
-          <div class="col-md-4">
-            <label><input id="blues" type="checkbox" value="Blues"> Blues</label>
-          </div>
-          <div class="col-md-5">
-            <label><input id="rap" type="checkbox" value="Rap"> Rap</label>
-          </div>
-          <div class="col-md-2"></div>  <!-- Empty space -->
-        </div>
-        <div class="row genre-table">
-          <div class="col-md-1"></div>  <!-- Empty space -->
-          <div class="col-md-4">
-            <label><input id="alternative" type="checkbox" value="Alternative"> Alternative</label>
-          </div>
-          <div class="col-md-5">
-            <label><input id="all" type="checkbox" value="All"> All</label>
-          </div>
-          <div class="col-md-2"></div>  <!-- Empty space -->
-        </div>  <!-- End of all checkboxes -->
-
-        <div id="filter-btn" class="row">  <!-- Filter button row -->
-          <div class="col-md-1"></div>
-          <div class="col-md-10">
-            <div class="button filter">
-              <button id="filter" class="btn btn-primary btn-sm filter-button">Filter By Genre</button>
-            </div>
-          </div>
-          <div class="col-md-1"></div>
-        </div>  <!-- End filter button row -->
-      </form>
-
-      </div>  <!-- End options box -->
-    
-      <div id="main-spacer" class="col-md-1"></div> <!--Spacer between content boxes -->      
-      
-      <div class="col-md-7 songInfo">  <!-- This div holds song info in right hand box -->
-        <section id="content" class="songs">
-        </section> 
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Update Trip Info</h4>
       </div>
-      <!-- <div class="col-md-1"></div> -->
-   </div>  <!-- End of row that holds both boxes -->  
-  </div>  <!-- End of grid -->
+      <div class="modal-body">
+
+
+      <div class="row form-group song-name">
+        <label class="col-sm-4 control-label">Year:</label>
+        <div class="col-sm-4">
+          <input id="modal-year" type="text" class="form-control" placeholder="Year">
+        </div>
+        <div class="col-sm-4"></div>
+      </div>      
+
+      <div class="row form-group song-name">
+        <label class="col-sm-4 control-label">Month:</label>
+        <div class="col-sm-4">
+          <input id="modal-month" type="text" class="form-control" placeholder="Month">
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
+
+      <div class="row form-group song-name">
+        <label class="col-sm-4 control-label">Review:</label>
+          <div class="col-sm-4">
+            <textarea id="modal-review" type="text" class="form-control" placeholder="Write Review">
+            </textarea>
+          </div>
+        <div class="col-sm-4"></div>
+      </div>
+
+
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button id="modal-btn" class="btn btn-default btn-primary btn-sm" type="button" value="Submit">Submit Update</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  <div id="input-field" class="container-fluid">
+    <div class="form-horizontal">
+      <div class="row form-group first-field">
+        <label class="col-sm-4 control-label">Name Of Trip</label>
+        <div class="col-sm-4">
+          <input id="trip-name" type="text" class="form-control" placeholder="What do you want to call this trip?">
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
+
+      <div class="row form-group song-name">
+        <label class="col-sm-4 control-label">Country:</label>
+        <div class="col-sm-4">
+          <input id="country" type="text" class="form-control" placeholder="Name of country">
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
+
+      <div class="row form-group song-name">
+        <label class="col-sm-4 control-label">State or Province:</label>
+        <div class="col-sm-4">
+          <input id="state" type="text" class="form-control" placeholder="State, Province, City, etc.">
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
+
+      <div class="row form-group song-name">
+        <label class="col-sm-4 control-label">City:</label>
+        <div class="col-sm-4">
+          <input id="city" type="text" class="form-control" placeholder="City">
+        </div>
+        <div class="col-sm-4"></div>
+      </div>      
+
+      <div class="row form-group song-name">
+        <label class="col-sm-4 control-label">Year:</label>
+        <div class="col-sm-4">
+          <input id="year" type="text" class="form-control" placeholder="Year">
+        </div>
+        <div class="col-sm-4"></div>
+      </div>      
+
+      <div class="row form-group song-name">
+        <label class="col-sm-4 control-label">Month:</label>
+        <div class="col-sm-4">
+          <input id="month" type="text" class="form-control" placeholder="Month">
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
+
+      <div class="row form-group song-name">
+        <label class="col-sm-4 control-label">Review:</label>
+          <div class="col-sm-4">
+            <textarea id="review" type="text" class="form-control" placeholder="Write Review">
+            </textarea>
+          </div>
+        <div class="col-sm-4"></div>
+      </div>
+
+      <div class="row form-group song-name">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-6">
+          <button id="visited" class="btn btn-default btn-success btn-md" type="button" value="button">Visited</button>
+          <button id="wish-list" class="btn btn-default btn-success btn-md" type="button" value="button">Wish List</button>
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
+
+      <div class="row form-group song-name">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-6">
+          <button id="add-location" class="btn btn-default btn-primary btn-lg" type="button" value="Submit">Add Location</button>
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-5">
+      <div class="row">
+        <h2>Places I've Been</h2>
+        <div id="list-of-trips"></div> 
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="row">
+        <!-- <div class="col-md-12"> -->
+          <h2>Places I'd Like To Go</h2>
+          <div id="wish-trips"></div>
+        <!-- </div> -->
+      </div>  
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+
+
+
+
+</body> <!-- End of grid -->
 
 
 <!-- <script src="bower_components/jquery/dist/jquery.min.js"></script> -->

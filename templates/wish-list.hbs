@@ -1,0 +1,46 @@
+
+
+{{#each trips}}
+  <div class="row col-sm-12 wish-list">
+    <div>
+      <h4>{{name}}</h4>
+    </div>
+    <div>Would like to go to {{city}}.</div>
+    <div class="row col-sm-6">
+      <button id="took-trip-btn" type="button" class="btn btn-info btn-primary btn-sm" data-toggle="modal" data-target="#myModal" data-key={{key}}>I Took This Trip!</button>
+    </div>
+    <div class="col-sm-6">
+      <button id="remove-list" type="button" class="btn btn-info btn-danger btn-sm" data-key={{key}}>Remove</button>
+    </div>
+    </div>
+    </div>
+  </div>
+{{/each}}{{!-- {{#each this}}
+  <div>
+    {{name}}.
+  </div>
+  <div>In {{month}} of {{year}} we went to {{city}}.</div>
+  <div>What I thought:</div>
+  <div>{{review}}</div>
+{{/each}} --}}
+
+{{!-- {{#each trips}}
+<div  class="col-md-3 col-xs-12 movie-margin movies" data-key="{{key}}">
+  <div class="col-md-12 col-xs-12 movie-info ">
+    <div class="row posterRow">
+
+    <div class="row actorRow">
+      <div class="actors col-md-12 col-sm-12 col-xs-12">
+        <p class="text-left">Would like to visit {{city}}.</p>
+      </div>
+    </div><!--actorRow -->
+
+    <div class="row ratingButtonDiv">
+
+      <div class="button button-padding col-md-5 col-sm-5 col-xs-5 col-md-offset-2">
+        <button id="add-new-trip" class="btn btn-default btn-primary btn-lg" type="button" value="Submit">Add To Visited</button>
+      </div> <!-- button div -->
+    </div> <!-- rating & button row-->
+  </div> <!-- movie info div -->
+</div> <!-- movie margin div -->
+{{/each}} --}}

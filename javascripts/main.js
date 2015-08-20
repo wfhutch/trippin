@@ -17,8 +17,8 @@ requirejs.config({
   }
 });
 
-requirejs(["dependencies", "load-data"],
-  function (dependencies, loadData) {
+requirejs(["dependencies", "load-data", "save-data", "modal"],
+  function (dependencies, loadData, saveData, modal) {
 
   });
 

@@ -5,14 +5,66 @@
     <div>
       <h4>{{name}}</h4>
     </div>
+
     <div>Would like to go to {{city}}.</div>
-    <div class="row col-sm-6">
-      <button id="took-trip-btn" type="button" class="btn btn-info btn-primary btn-sm" data-toggle="modal" data-target="#myModal" data-key={{key}}>I Took This Trip!</button>
+    <div class="row review-button-div">
+      <div class="col-sm-6">
+
+        {{!-- if key had not been defined in load-data, would add #{{@key}} to end of button id --}}
+        <button id="{{key}}" type="button" class="btn btn-info btn-primary btn-sm review-button">I Took This Trip!</button>
+      </div>
+
+      <div class="col-sm-6">
+        <button type="button" class="btn btn-info btn-danger btn-sm remove-list" data-btn="{{key}}">Remove</button>
+      </div>
     </div>
-    <div class="col-sm-6">
-      <button id="remove-list" type="button" class="btn btn-info btn-danger btn-sm" data-key={{key}}>Remove</button>
-    </div>
-    </div>
+
+    <div class="row col-sm-12"></div>
+
+    <div class="review-entry" data-key="{{key}}">
+
+      <div class="row col-sm-12">
+        <h4 class="review-heading">Update Trip Info</h4>
+      </div>
+
+      <div class="row form-group">
+        <div class="col-sm-3"></div>
+        <label class="col-sm-2 control-label">Year:</label>
+        <div class="col-sm-4">
+          <input id="add-year" type="text" class="form-control" placeholder="Year">
+        </div>
+        <div class="col-sm-3"></div>
+      </div>      
+
+      <div class="row form-group">
+        <div class="col-sm-3"></div>
+        <label class="col-sm-2 control-label">Month:</label>
+        <div class="col-sm-4">
+          <input id="add-month" type="text" class="form-control" placeholder="Month">
+        </div>
+        <div class="col-sm-3"></div>
+      </div>
+
+      <div class="row form-group">
+        <div class="col-sm-1"></div>
+        <label class="col-sm-2 control-label">Review:</label>
+        <div class="col-sm-7">
+          <textarea id="add-review" type="text" class="form-control" placeholder="Review"></textarea>
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-1"></div>
+          <div class="col-sm-8">
+            <button id="submit-review-btn" class="btn btn-default btn-primary btn-sm review-buttons" type="button" value="Submit" data-key="{{key}}">Submit Update</button>
+          </div>
+          <div class="col-sm-1">
+            <button id="cancel-btn" class="btn btn-default btn-primary btn-sm review-buttons" type="button" value="Submit" data-key="{{key}}">Cancel</button>
+          </div>
+        <div class="col-sm-2"></div>
+      </div>
+      <div class="row col-sm-12 review-spacer"></div>
     </div>
   </div>
 {{/each}}{{!-- {{#each this}}

@@ -5,6 +5,8 @@ define(function(require) {
   var $ = require("jquery");
   // console.log(templates);
 
+
+  // Gets all data from Firebase database
   var myFirebaseRef = new Firebase("https://nss-wayne-trippin.firebaseio.com/");
   myFirebaseRef.child("trips").on("value", function(snapshot) {
     var trips = snapshot.val();
@@ -12,17 +14,19 @@ define(function(require) {
 
     var allTripsArray = [];
 
+
+    // Gets the specific unique data key defined by Firebase for each trip 
     for (var key in trips) {
       var tripsWithId = trips[key];
       tripsWithId.key = key;
       allTripsArray[allTripsArray.length] = tripsWithId;
-    }
       // console.log("trips ID", tripsWithId);
+    }
 
-    console.log("allTripsArray",allTripsArray);
+    // console.log("allTripsArray",allTripsArray);
 
     var tripsObject = {trips: allTripsArray};
-    // console.log("trips Object", tripsObject);
+    console.log("trips Object", tripsObject);
 
     var wishTripsArray = [];
 
@@ -34,8 +38,10 @@ define(function(require) {
     // console.log("wish", wishTripsArray);
 
     var wishTripsObject = {trips: wishTripsArray};
-    // console.log(wishTripsObject);
+    console.log("wish object", wishTripsObject);
 
+
+    // Puts trips not yet taken on page under "Where I'd Like To Go"
     var populateWishTemplate = templates.wishTpl(wishTripsObject);
     $("#wish-trips").html(populateWishTemplate);
 
@@ -55,6 +61,7 @@ define(function(require) {
     var beenTripsObject = {trips: beenTripsArray};
     // console.log(beenTripsObject);
     
+    //puts trips on page already taken on page under "Where I've Been"
     var populateTemplate = templates.tripTpl(beenTripsObject);
     $("#list-of-trips").html(populateTemplate);
 

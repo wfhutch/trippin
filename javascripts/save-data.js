@@ -1,6 +1,8 @@
 define(function(require) {
   var $ = require("jquery");
 
+  //Enter new trip.  Can be either visited or on wishlist.
+
   var visited = false;
 
   $("#visited").click(function() {

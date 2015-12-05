@@ -1,7 +1,5 @@
-
-
 {{#each trips}}
-  <div class="row col-sm-12" data-key={{key}}>
+  <div class="row col-sm-12 trips-taken" data-key={{key}}>
     <div>
       <h4>{{name}}</h4>
     </div>
@@ -9,32 +7,5 @@
     <div>What I thought:
       <p>{{review}}</p>
     </div>
-    {{!-- <button id="delete-trip" class="btn btn-default btn-danger btn-xs" type="button" value="Submit">Remove</button> --}}
   </div>
 {{/each}}
-
-{{!-- {{#each trips}}
-<div  class="col-md-3 col-xs-12 movie-margin movies" data-key="{{key}}">
-  <div class="col-md-12 col-xs-12 movie-info ">
-    <div class="row posterRow">
-
-    </div> 
-    <div class="row titleRow">
-      <div class="movieTitle col-md-12"> <h4>{{name}}</h4>
-      </div>
-    </div> 
-
-    <div class="row actorRow">
-      <div class="actors col-md-12 col-sm-12 col-xs-12"><p class="text-left">In {{month}} of {{year}} we went to {{city}}.</p>
-      </div>
-    </div><
-
-    <div class="row ratingButtonDiv">
-      <div class="rating col-md-5 col-sm-5 col-xs-5">
-        <p>My review:</p>
-        <p>{{review}}</p>
-      </div>
-    </div> 
-  </div> 
-</div> 
-{{/each}} --}}

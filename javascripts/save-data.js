@@ -25,15 +25,12 @@ define(function(require) {
       visited: visited
     };
 
-    // console.log(newLocation);
-
     $.ajax({
       url: "https://nss-wayne-trippin.firebaseio.com/trips.json",
       method: "POST",
       data: JSON.stringify(newLocation)
       })
     .done(function(newData) {
-      // console.log("newData", newData);
       location.reload();
     })
     .fail(function(xhr, status, error) {

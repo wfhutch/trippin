@@ -5,28 +5,11 @@ define(function(require) {
   var $ = require("jquery");
   var firebase = require("firebase");
 
-
   $(document).on("click", ".review-button", function() {
     var btnId = $(this).attr('id');
     console.log(btnId);
-    $(".review-entry").css("display", "block");
-
-    // console.log($(".wish-list").children(".attr('data-key')"));
-
-    // if ($("div").attr("data-key") === btnId) {
-    //   console.log("yes");
-    // } else {
-    //     console.log("no");
-    // }
-
-    // $("button").attr(".remove-list").css("display", "none");
-
-    // $("div[id=btnId]").css("display", "block");
-    
-    // var buttonId = $(this).attr("id").split("#")[1];
-    // console.log(buttonId);
+    $("." + btnId).css("display", "block");
     console.log("took trip button clicked");
-
   });
 
   $(document).on("click", "#cancel-btn", function() {
@@ -54,11 +37,7 @@ define(function(require) {
     console.log(myFireBaseRef);
     myFireBaseRef.update({ year: year, month: month, review: review, visited: true });
 
-      location.reload();
-
-    // myFireBaseRef.child('review').push(newReview);
-
-    
+    location.reload();
   });
 });
 

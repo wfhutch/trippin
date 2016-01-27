@@ -5,15 +5,15 @@ define(function(require) {
 
   var visited = false;
 
-  $("#visited").click(function() {
-    visited = true;
-  });
-
-  $("#wish-list").click(function() {
-    visited = false;
-  });
-
   $("#add-location").click(function() {
+
+    var optionChosen = $("[name = 'radio']");
+    for (var i = 0; i < optionChosen.length; i++) {
+      if(optionChosen[i].checked && optionChosen[i].value === "taken") {
+        visited = true;
+      }
+    }
+
     var newLocation = {
       name: $("#trip-name").val(),
       country: $("#country").val(),

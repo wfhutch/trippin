@@ -19,7 +19,7 @@
   <div id="input-field" class="container-fluid">
     <div class="form-horizontal">
       <div class="row form-group first-field">
-        <label class="col-sm-4 control-label label-name">Name Of Trip</label>
+        <label class="col-sm-4 control-label label-name">Name Of Trip:</label>
         <div class="col-sm-4">
           <input id="trip-name" type="text" class="form-control" placeholder="What do you want to call this trip?">
         </div>
@@ -29,7 +29,7 @@
       <div class="row form-group song-name">
         <label class="col-sm-4 control-label label-name">Country:</label>
         <div class="col-sm-4">
-          <input id="country" type="text" class="form-control" placeholder="Name of country">
+          <input id="country" type="text" class="form-control">
         </div>
         <div class="col-sm-4"></div>
       </div>
@@ -37,7 +37,7 @@
       <div class="row form-group song-name">
         <label class="col-sm-4 control-label label-name">State or Province:</label>
         <div class="col-sm-4">
-          <input id="state" type="text" class="form-control" placeholder="State, Province, City, etc.">
+          <input id="state" type="text" class="form-control">
         </div>
         <div class="col-sm-4"></div>
       </div>
@@ -45,7 +45,7 @@
       <div class="row form-group song-name">
         <label class="col-sm-4 control-label label-name">City:</label>
         <div class="col-sm-4">
-          <input id="city" type="text" class="form-control" placeholder="City">
+          <input id="city" type="text" class="form-control">
         </div>
         <div class="col-sm-4"></div>
       </div>      
@@ -53,7 +53,7 @@
       <div class="row form-group song-name">
         <label class="col-sm-4 control-label label-name">Year:</label>
         <div class="col-sm-4">
-          <input id="year" type="text" class="form-control" placeholder="Year">
+          <input id="year" type="text" class="form-control">
         </div>
         <div class="col-sm-4"></div>
       </div>      
@@ -61,7 +61,7 @@
       <div class="row form-group song-name">
         <label class="col-sm-4 control-label label-name">Month:</label>
         <div class="col-sm-4">
-          <input id="month" type="text" class="form-control" placeholder="Month">
+          <input id="month" type="text" class="form-control">
         </div>
         <div class="col-sm-4"></div>
       </div>
@@ -69,7 +69,7 @@
       <div class="row form-group song-name">
         <label class="col-sm-4 control-label label-name">Review:</label>
           <div class="col-sm-4">
-            <textarea id="review" type="text" class="form-control" placeholder="Write Review">
+            <textarea id="review" type="text" class="form-control">
             </textarea>
           </div>
         <div class="col-sm-4"></div>
@@ -78,8 +78,8 @@
       <div class="row form-group song-name">
         <div class="col-sm-4"></div>
         <div class="col-sm-6">
-          <button id="visited" class="btn btn-default btn-success btn-md" type="button" value="button">Have Visited</button>
-          <button id="wish-list" class="btn btn-default btn-success btn-md" type="button" value="button">Want To Visit</button>
+          <label id="trip-taken-radio"class="radio-inline label-name"><input type="radio" name="radio" value="taken">Trip Taken</label>
+          <label id="wish-list-radio" class="radio-inline label-name"><input type="radio" name="radio" value="wish">Wish List</label>
         </div>
         <div class="col-sm-2"></div>
       </div>
@@ -92,25 +92,23 @@
         <div class="col-sm-2"></div>
       </div>
     </div>
-  </div>
 
-  <div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-5">
-      <div class="row">
-        <h2 class="been-or-wish">Places I've Been</h2>
-        <div id="list-of-trips"></div> 
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-5">
+        <div class="row">
+          <h2 class="been-or-wish">Places I've Been</h2>
+          <div id="list-of-trips"></div> 
+        </div>
       </div>
-    </div>
-    <div class="col-md-5">
-      <div class="row">
-        <!-- <div class="col-md-12"> -->
+      <div class="col-md-5">
+        <div class="row">
           <h2 class="been-or-wish">Places I'd Like To Go</h2>
           <div id="wish-trips"></div>
-        <!-- </div> -->
-      </div>  
+        </div>  
+      </div>
+      <div class="col-md-1"></div>
     </div>
-    <div class="col-md-1"></div>
   </div>
 
 <script data-main="javascripts/main" src="lib/bower_components/requirejs/require.js"></script>

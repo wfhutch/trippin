@@ -10,7 +10,14 @@
   border: 2px solid black; }
 
 .header {
-  text-align: center; }
+  text-align: center;
+  font-family: 'Bree Serif', serif; }
+
+.been-or-wish {
+  font-family: 'Bree Serif', cursive; }
+
+.label-name {
+  font-family: 'Bree Serif', cursive; }
 
 .wish-list {
   margin-bottom: 20px; }

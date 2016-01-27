@@ -1,9 +1,6 @@
 #input-field {
   margin-top: 50px; }
 
-#list-of-trips {
-  margin-left: 4%; }
-
 .review-entry {
   margin-top: 20px;
   display: none;
@@ -17,7 +14,12 @@
   font-family: 'Bree Serif', cursive; }
 
 .label-name {
-  font-family: 'Bree Serif', cursive; }
+  font-family: 'Bree Serif', cursive;
+  font-size: 16px; }
+
+.radio-inline {
+  font-size: 18px;
+  padding-right: 15px; }
 
 .wish-list {
   margin-bottom: 20px; }
@@ -38,11 +40,6 @@ button {
 
 #submit-review-btn {
   margin-bottom: 10px; }
-
-.radio {
-  margin-left: 10px;
-  padding: 10px;
-  font-size: 16px; }
 
 body {
   background: radial-gradient(at top right, #F9FCA2 10%, #B6E0FA 20%); }

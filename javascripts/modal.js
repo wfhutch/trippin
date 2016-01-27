@@ -22,10 +22,17 @@ define(function(require) {
 
   $("body").on("click", "#submit-review-btn", function() {
 
-    var year = $("#add-year").val();
-    var month = $("#add-month").val();
-    var review = $("#add-review").val();
+    
     var key = $(this).attr("data-key");
+    var year = $("#add-year" + key).val();
+    var month = $("#add-month" + key).val();
+    var review = $("#add-review" + key).val();
+    
+    console.log("update year ", year);
+    console.log("update month ", month);
+    console.log("update review ", review);
+    console.log("update trip key = ", key);
+
 
     var myFireBaseRef = new Firebase('https://nss-wayne-trippin.firebaseio.com/trips/' + key);
     myFireBaseRef.update({ year: year, month: month, review: review, visited: true });

@@ -6,19 +6,20 @@
   <meta charset="utf-8">
   <title>Trippin</title>
   <link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Bree+Serif|Chewy' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
 
 <body>
   <header>
-    <h1 class="header">Trippin' Out</h1>
+    <h1 class="header">Trippin' Bucket</h1>
     <h3 class="header">My Travel Diary</h3>
   </header>
 
   <div id="input-field" class="container-fluid">
     <div class="form-horizontal">
       <div class="row form-group first-field">
-        <label class="col-sm-4 control-label">Name Of Trip</label>
+        <label class="col-sm-4 control-label label-name">Name Of Trip</label>
         <div class="col-sm-4">
           <input id="trip-name" type="text" class="form-control" placeholder="What do you want to call this trip?">
         </div>
@@ -26,7 +27,7 @@
       </div>
 
       <div class="row form-group song-name">
-        <label class="col-sm-4 control-label">Country:</label>
+        <label class="col-sm-4 control-label label-name">Country:</label>
         <div class="col-sm-4">
           <input id="country" type="text" class="form-control" placeholder="Name of country">
         </div>
@@ -34,7 +35,7 @@
       </div>
 
       <div class="row form-group song-name">
-        <label class="col-sm-4 control-label">State or Province:</label>
+        <label class="col-sm-4 control-label label-name">State or Province:</label>
         <div class="col-sm-4">
           <input id="state" type="text" class="form-control" placeholder="State, Province, City, etc.">
         </div>
@@ -42,7 +43,7 @@
       </div>
 
       <div class="row form-group song-name">
-        <label class="col-sm-4 control-label">City:</label>
+        <label class="col-sm-4 control-label label-name">City:</label>
         <div class="col-sm-4">
           <input id="city" type="text" class="form-control" placeholder="City">
         </div>
@@ -50,7 +51,7 @@
       </div>      
 
       <div class="row form-group song-name">
-        <label class="col-sm-4 control-label">Year:</label>
+        <label class="col-sm-4 control-label label-name">Year:</label>
         <div class="col-sm-4">
           <input id="year" type="text" class="form-control" placeholder="Year">
         </div>
@@ -58,7 +59,7 @@
       </div>      
 
       <div class="row form-group song-name">
-        <label class="col-sm-4 control-label">Month:</label>
+        <label class="col-sm-4 control-label label-name">Month:</label>
         <div class="col-sm-4">
           <input id="month" type="text" class="form-control" placeholder="Month">
         </div>
@@ -66,7 +67,7 @@
       </div>
 
       <div class="row form-group song-name">
-        <label class="col-sm-4 control-label">Review:</label>
+        <label class="col-sm-4 control-label label-name">Review:</label>
           <div class="col-sm-4">
             <textarea id="review" type="text" class="form-control" placeholder="Write Review">
             </textarea>
@@ -86,7 +87,7 @@
       <div class="row form-group song-name">
         <div class="col-sm-4"></div>
         <div class="col-sm-6">
-          <button id="add-location" class="btn btn-default btn-primary btn-lg" type="button" value="Submit">Add Location</button>
+          <button id="add-location" class="btn btn-default btn-primary btn-lg" type="button" value="Submit">Add Trip</button>
         </div>
         <div class="col-sm-2"></div>
       </div>
@@ -97,14 +98,14 @@
     <div class="col-md-1"></div>
     <div class="col-md-5">
       <div class="row">
-        <h2>Places I've Been</h2>
+        <h2 class="been-or-wish">Places I've Been</h2>
         <div id="list-of-trips"></div> 
       </div>
     </div>
     <div class="col-md-5">
       <div class="row">
         <!-- <div class="col-md-12"> -->
-          <h2>Places I'd Like To Go</h2>
+          <h2 class="been-or-wish">Places I'd Like To Go</h2>
           <div id="wish-trips"></div>
         <!-- </div> -->
       </div>  

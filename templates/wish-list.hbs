@@ -3,7 +3,7 @@
 {{#each trips}}
   <div class="row col-sm-12 wish-list">
     <div>
-      <p>{{name}}</p>
+      <h4>{{name}}</h4>
     </div>
 
     <div>Would like to go to {{city}}.</div>
@@ -30,7 +30,7 @@
         <div class="col-sm-3"></div>
         <label class="col-sm-2 control-label">Year:</label>
         <div class="col-sm-4">
-          <input id="add-year" type="text" class="form-control" placeholder="Year">
+          <input id="add-year{{key}}" type="text" class="form-control add-year" placeholder="Year">
         </div>
         <div class="col-sm-3"></div>
       </div>      
@@ -39,7 +39,7 @@
         <div class="col-sm-3"></div>
         <label class="col-sm-2 control-label">Month:</label>
         <div class="col-sm-4">
-          <input id="add-month" type="text" class="form-control" placeholder="Month">
+          <input id="add-month{{key}}" type="text" class="form-control add-month" placeholder="Month">
         </div>
         <div class="col-sm-3"></div>
       </div>
@@ -48,7 +48,7 @@
         <div class="col-sm-1"></div>
         <label class="col-sm-2 control-label">Review:</label>
         <div class="col-sm-7">
-          <textarea id="add-review" type="text" class="form-control" placeholder="Review"></textarea>
+          <textarea id="add-review{{key}}" type="text" class="form-control add-review" placeholder="Review"></textarea>
         </div>
         <div class="col-sm-2"></div>
       </div>

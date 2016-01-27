@@ -1,0 +1,9 @@
+{
+  "firebase": "nss-wayne-trippin",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
